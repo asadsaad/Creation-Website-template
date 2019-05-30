@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="file.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link rel="stylesheet" href="css\animate.css">
+<link rel="stylesheet" href="slick\slick.css">
+<link rel="stylesheet" href="slick\slick-theme.css">
+    <script src="jquery.js" charset="utf-8">
+    </script>
+    <link rel="stylesheet" href="css1\fontawesome-all.min.css">
+
+    <title></title>
+    <style media="screen">
+      .home{background-image: url(blog.jpg);}
+    </style>
+  </head>
+  <body>
+    <section class="home" id="top">
+<div class="innerhome">
+  <div class="nav">
+<ul>
+  <li><a href="file.html">Portfolio</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="https://www.facebook.com/asad.saad.169405?ref=bookmarks">Buy</a></li>
+</ul>
+<div class="social">
+  <ul>
+<li><i class="fab fa-facebook-f"></i></li>
+<li> <i class="fab fa-twitter"></i></li>
+<li>  <i class="fab fa-google-plus-g"></i></li>
+<li>  <i class="fab fa-linkedin-in"></i></li>
+  </ul>
+</div>
+</div>
+
+
+  <header>
+
+
+  <div class="logo">
+<img src="logo.png" alt="">
+  </div>
+<div class="menuicone">
+  <span class="span1"></span>
+  <span class="span2"></span>
+  <span class="span3"></span>
+  </div>
+</header>
+<div class="text">
+  <h1 class="wow bounceIn">Agency Blogs</h1>
+<div class="para">
+
+
+  <p class="wow bounceInLeft">Think of a creative digital agency in Madrid,
+turning your dreams into reality.</p></div>
+</div>
+<span class="span4">
+<span></span>
+<span></span>
+<span></span>
+
+</span>
+
+
+
+</div>
+    </section>
+    <div class="scroll">
+<a href="#top">
+<i class="fas fa-arrow-up"></i></a>
+    </div>
+
+<footer class="wow bounceInUp slow">&copy 2018,made by Asad</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="javascript/wow.min.js"></script>
+          <script>
+          new WOW().init();
+          </script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".menuicone").click(function(){
+      $(".nav").toggleClass("opannav");
+    });
+  });
+  $(document).ready(function(){
+    $(".menuicone").click(function(){
+      $(this).toggleClass("change");
+    });
+  });
+  $(window).scroll(function(){if($(this).scrollTop()>1) {
+    $(".scroll").addClass("sticky");
+  }
+  else {$(".scroll").removeClass("sticky");
+  }
+  });
+  // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
+</script>
+  </body>
+
+</html>
